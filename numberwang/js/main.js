@@ -1,5 +1,5 @@
 document.querySelector('button').addEventListener('click', getNumber)
-document.querySelector('button').addEventListener('click', getCats)
+document.querySelector('button').addEventListener('click', getMoreCats)
 
 
 
@@ -32,6 +32,27 @@ function getCats(){
         console.log(data)
         catUrl = data.url
         document.querySelector('img').src = `https://cataas.com/${data.url}`
+
+      })
+      .catch(err => {
+          console.log(`error ${err}`)
+      });
+}
+
+// https://api.thecatapi.com/v1/images/search
+
+function getMoreCats(){
+  const number = document.querySelector('input').value
+  console.log(number)
+  const url = `https://api.thecatapi.com/v1/images/search`
+
+
+  fetch(url)
+      .then(res => res.json()) // parse response as JSON
+      .then(data => {
+        console.log(data)
+        catUrl = data.url
+        document.querySelector('img').src = data[0].url
 
       })
       .catch(err => {
