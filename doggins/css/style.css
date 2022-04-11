@@ -1,0 +1,70 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+img{
+  display: block;
+  margin: 0 auto;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+html {
+  border: 2px solid red;
+  font-size: 2rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: linear-gradient(lightyellow, orange);
+  height: 100Vh;
+}
+
+header {
+  margin-bottom: 30px;
+  text-align: center;
+  border: 2px solid green;
+}
+
+select {
+  font-size: 1.1rem;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid blue;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.column {
+  flex: 1;
+  border: 2px solid green;
+}
+img {
+  max-width: 900px;
+  max-height: 700px;
+}
+
+span {
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 1.3rem;
+}
+
+#dog-name {
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+#left-column {
+  text-align: center;
+}
